@@ -11,7 +11,7 @@ export function Community() {
     >
       <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
         <SectionHeading
-          index="06"
+          index="07"
           eyebrow="Community & impact"
           title={
             <>

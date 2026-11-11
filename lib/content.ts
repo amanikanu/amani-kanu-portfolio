@@ -437,8 +437,80 @@ export const availability = [
   "Limited availability for consulting",
 ];
 
+/* ---------- Skills ---------- */
+
+export type SkillCategory = {
+  id: string;
+  label: string;
+  short: string;
+};
+
+export const skillCategories: SkillCategory[] = [
+  { id: "languages", label: "Languages", short: "Lang" },
+  { id: "frameworks", label: "Frameworks", short: "FW" },
+  { id: "design", label: "Design & CSS", short: "CSS" },
+  { id: "state", label: "State Management", short: "State" },
+  { id: "tools", label: "Tooling & Testing", short: "Tools" },
+  { id: "cloud", label: "Cloud & APIs", short: "Cloud" },
+];
+
+export type Skill = {
+  name: string;
+  category: string;
+  level: 1 | 2 | 3 | 4 | 5;
+  years: number;
+};
+
+export const skills: Skill[] = [
+  // Languages
+  { name: "TypeScript", category: "languages", level: 5, years: 6 },
+  { name: "JavaScript", category: "languages", level: 5, years: 8 },
+  { name: "HTML5", category: "languages", level: 5, years: 8 },
+  { name: "CSS3", category: "languages", level: 5, years: 8 },
+  // Frameworks
+  { name: "React", category: "frameworks", level: 5, years: 7 },
+  { name: "Next.js", category: "frameworks", level: 5, years: 5 },
+  { name: "Node.js", category: "frameworks", level: 5, years: 6 },
+  { name: "Express.js", category: "frameworks", level: 4, years: 5 },
+  { name: "Remix", category: "frameworks", level: 4, years: 3 },
+  { name: "Gatsby", category: "frameworks", level: 4, years: 3 },
+  // Design & CSS
+  { name: "Tailwind CSS", category: "design", level: 5, years: 5 },
+  { name: "SCSS", category: "design", level: 5, years: 7 },
+  { name: "CSS Grid", category: "design", level: 5, years: 6 },
+  { name: "Flexbox", category: "design", level: 5, years: 7 },
+  { name: "styled-components", category: "design", level: 4, years: 4 },
+  // State Management
+  { name: "Redux Toolkit", category: "state", level: 5, years: 5 },
+  { name: "Redux", category: "state", level: 5, years: 6 },
+  { name: "Zustand", category: "state", level: 4, years: 3 },
+  { name: "Context API", category: "state", level: 5, years: 5 },
+  // Tooling & Testing
+  { name: "Git", category: "tools", level: 5, years: 8 },
+  { name: "GitHub", category: "tools", level: 5, years: 8 },
+  { name: "Jest", category: "tools", level: 4, years: 5 },
+  { name: "React Testing Library", category: "tools", level: 4, years: 5 },
+  { name: "ESLint", category: "tools", level: 5, years: 6 },
+  { name: "Prettier", category: "tools", level: 5, years: 6 },
+  { name: "Cypress", category: "tools", level: 3, years: 3 },
+  // Cloud & APIs
+  { name: "AWS", category: "cloud", level: 5, years: 5 },
+  { name: "Firebase", category: "cloud", level: 4, years: 4 },
+  { name: "RESTful APIs", category: "cloud", level: 5, years: 7 },
+  { name: "GraphQL", category: "cloud", level: 4, years: 4 },
+  { name: "DynamoDB", category: "cloud", level: 4, years: 3 },
+  { name: "Amplify", category: "cloud", level: 4, years: 3 },
+];
+
+export const skillStats = [
+  { value: "31", label: "Technologies" },
+  { value: "6", label: "Categories" },
+  { value: "8", label: "Years of experience" },
+];
+
 export const navLinks = [
   { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
   { label: "Work", href: "#work" },
   { label: "Speaking", href: "#speaking" },
   { label: "Community", href: "#community" },

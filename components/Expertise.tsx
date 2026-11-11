@@ -11,7 +11,7 @@ export function Expertise() {
     >
       <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
         <SectionHeading
-          index="02"
+          index="03"
           eyebrow="What I do"
           title={
             <>
