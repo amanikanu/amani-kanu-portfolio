@@ -24,6 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://amanikanu.com"),
   title: "Amani Kanu — The Tech Evangelist | Senior Frontend Engineer & DevRel",
   description:
     "Amani Kanu is a Senior Frontend Engineer and Developer Relations professional from Lagos, Nigeria — building scalable web products, inclusive developer communities, and technical content across Africa and beyond.",
@@ -72,15 +73,6 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
     >
-      <head>
-        {/* Marks JS availability before paint — powers the no-JS reveal fallback */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "document.documentElement.classList.add('js');",
-          }}
-        />
-      </head>
       <body className="font-sans antialiased">{children}</body>
       <script
         type="application/ld+json"

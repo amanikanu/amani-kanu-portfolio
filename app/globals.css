@@ -115,12 +115,6 @@ body {
   will-change: opacity, transform;
 }
 
-/* No-JS fallback: content is always visible */
-html:not(.js) .reveal {
-  opacity: 1;
-  transform: none;
-}
-
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
