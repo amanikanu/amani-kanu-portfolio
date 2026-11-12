@@ -36,6 +36,7 @@ export function Community() {
             <Reveal
               key={item.name}
               delay={(i % 3) * 70}
+              direction="left"
               className="group border-t border-line first:border-t-0"
             >
               <div className="grid grid-cols-1 gap-3 py-8 sm:grid-cols-12 sm:gap-8">
@@ -62,7 +63,7 @@ export function Community() {
         </div>
 
         {/* WhatsApp community highlight */}
-        <Reveal className="mt-12" delay={100}>
+        <Reveal className="mt-12" delay={100} direction="scale">
           <a
             href="https://whatsapp.com/channel/0029Vb5ezhHC1FuFX611P80z"
             target="_blank"
@@ -88,7 +89,7 @@ export function Community() {
         </Reveal>
 
         {/* Mentorship note */}
-        <Reveal className="mt-10 flex flex-wrap items-center justify-between gap-6">
+        <Reveal className="mt-10 flex flex-wrap items-center justify-between gap-6" direction="clip">
           <p className="max-w-xl text-[14px] text-paper-dim">
             Mentoring is where the work compounds - guiding mentees through real
             engineering work at Semicolon.africa, Nexascale and Alt School Africa.

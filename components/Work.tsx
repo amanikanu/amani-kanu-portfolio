@@ -26,6 +26,7 @@ export function Work() {
             <Reveal
               key={project.name}
               delay={(i % 4) * 70}
+              direction="clip-left"
               className="group border-t border-line first:border-t-0"
             >
               <a

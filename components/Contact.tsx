@@ -25,7 +25,7 @@ export function Contact() {
         <div className="mt-16 grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16">
           {/* Left: availability, details, socials */}
           <div className="lg:col-span-5">
-            <Reveal>
+            <Reveal direction="left">
               <div className="border-y border-line">
                 {availability.map((item) => (
                   <div
@@ -42,7 +42,7 @@ export function Contact() {
               </div>
             </Reveal>
 
-            <Reveal className="mt-10" delay={80}>
+            <Reveal className="mt-10" delay={80} direction="left">
               <dl className="space-y-4">
                 <div className="flex items-center justify-between gap-6 border-b border-line-soft pb-4">
                   <dt className="font-mono text-[11px] uppercase tracking-[0.14em] text-paper-faint">
@@ -79,7 +79,7 @@ export function Contact() {
               </dl>
             </Reveal>
 
-            <Reveal className="mt-10" delay={140}>
+            <Reveal className="mt-10" delay={140} direction="right">
               <div className="grid grid-cols-2 gap-px overflow-hidden border border-line">
                 {socials.map((social) => (
                   <a
@@ -102,7 +102,7 @@ export function Contact() {
           </div>
 
           {/* Right: form */}
-          <Reveal className="lg:col-span-7" delay={120}>
+          <Reveal className="lg:col-span-7" delay={120} direction="right">
             <div className="interactive-card border border-line bg-ink-soft/30 p-8 sm:p-10">
               <ContactForm />
             </div>

@@ -60,10 +60,12 @@ export function Skills() {
         />
 
         {/* Stats row */}
-        <Reveal className="mt-10 grid grid-cols-3 gap-4 sm:gap-8">
-          {skillStats.map((stat) => (
-            <div
+        <div className="mt-10 grid grid-cols-3 gap-4 sm:gap-8">
+          {skillStats.map((stat, si) => (
+            <Reveal
               key={stat.label}
+              delay={si * 100}
+              direction="scale"
               className="border-y border-line pt-4 sm:border pt-4 sm:pb-4"
             >
               <p className="display text-[clamp(28px,3vw,44px)] text-paper">
@@ -72,12 +74,12 @@ export function Skills() {
               <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-faint sm:text-[11px]">
                 {stat.label}
               </p>
-            </div>
+            </Reveal>
           ))}
-        </Reveal>
+        </div>
 
         {/* Controls: search + filter tabs */}
-        <Reveal className="mt-12" delay={80}>
+        <Reveal className="mt-12" delay={80} direction="left">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             {/* Filter tabs */}
             <div

@@ -25,6 +25,7 @@ export function Expertise() {
             <Reveal
               key={cap.index}
               delay={i * 80}
+              direction="clip"
               className="group border-t border-line first:border-t-0"
             >
               <div className="grid grid-cols-1 items-start gap-6 py-10 sm:grid-cols-12 sm:gap-10">

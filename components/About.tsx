@@ -22,7 +22,7 @@ export function About() {
         />
 
         {/* Body */}
-        <Reveal className="mt-14 max-w-[720px]">
+        <Reveal className="mt-14 max-w-[720px]" direction="clip">
           <p className="text-[clamp(19px,2vw,24px)] leading-[1.55] text-paper">
             {profile.aboutLead}
           </p>
@@ -32,7 +32,7 @@ export function About() {
         </Reveal>
 
         {/* Belief callout */}
-        <Reveal className="mt-12" delay={100}>
+        <Reveal className="mt-12" delay={100} direction="clip">
           <blockquote className="border-l-2 border-vermilion bg-ink-soft/60 py-2 pl-6 pr-4">
             <p className="font-display text-[clamp(20px,2.4vw,28px)] font-medium leading-snug tracking-tight text-paper">
               {profile.belief}
@@ -42,7 +42,7 @@ export function About() {
 
         {/* Status + stats grid */}
         <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
-          <Reveal className="lg:col-span-7">
+          <Reveal className="lg:col-span-7" direction="left">
             <div className="divide-y divide-line-soft border-y border-line">
               {profile.status.map((row) => (
                 <div
@@ -60,7 +60,7 @@ export function About() {
             </div>
           </Reveal>
 
-          <Reveal className="lg:col-span-5" delay={120}>
+          <Reveal className="lg:col-span-5" delay={120} direction="right">
             <div className="grid grid-cols-2 gap-x-6 gap-y-10">
               {profile.stats.map((stat) => (
                 <div key={stat.label}>

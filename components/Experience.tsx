@@ -26,6 +26,7 @@ export function Experience() {
             <Reveal
               key={`${job.company}-${job.role}`}
               delay={i * 80}
+              direction="left"
               className="group border-t border-line first:border-t-0"
             >
               <article className="grid grid-cols-1 gap-3 py-10 transition-colors duration-300 hover:bg-ink-soft/40 sm:grid-cols-12 sm:gap-8">

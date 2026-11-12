@@ -40,7 +40,7 @@ export function Speaking() {
         {/* Speaking engagement cards grouped by year */}
         <div className="mt-16 space-y-20">
           {speaking.map((group, gi) => (
-            <Reveal key={group.year} delay={gi * 80}>
+            <Reveal key={group.year} delay={gi * 80} direction="left">
               {/* Year header */}
               <h3 className="mb-8 flex items-center gap-4 font-mono text-[15px] tracking-[0.1em] text-paper">
                 <span className="text-paper-faint">—</span>
