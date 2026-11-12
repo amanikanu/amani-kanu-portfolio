@@ -75,6 +75,85 @@
       transform: translateY(0);
     }
   }
+
+  @keyframes float-slow {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-12px) rotate(2deg);
+    }
+  }
+
+  @keyframes gradient-rotate {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes scroll-bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(8px);
+      opacity: 0.3;
+    }
+  }
+
+  @keyframes grid-pan {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 24px);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateX(120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%,
+    100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+
+  --animate-float-slow: float-slow 4s ease-in-out infinite;
+  --animate-gradient-rotate: gradient-rotate 3s ease infinite;
+  --animate-scroll-bounce: scroll-bounce 2s ease-in-out infinite;
+  --animate-grid-pan: grid-pan 8s linear infinite;
+  --animate-glow-pulse: glow-pulse 3s ease-in-out infinite;
 }
 
 /* ---------- Base ---------- */
@@ -284,5 +363,203 @@ body {
   }
   .animate-float {
     animation: none !important;
+  }
+}
+
+/* ---------- Hero v2 ---------- */
+
+/* Animated dot grid background */
+.hero-grid {
+  background-image:
+    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--color-paper) 8%, transparent) 1px, transparent 0);
+  background-size: 32px 32px;
+  background-position: 0 0;
+  animation: grid-pan 8s linear infinite;
+}
+
+/* Gradient border frame for portrait */
+.hero-portrait-frame {
+  position: relative;
+  border-radius: 0.25rem;
+  padding: 1.5px;
+  background: linear-gradient(
+    135deg,
+    var(--color-vermilion),
+    transparent 40%,
+    color-mix(in srgb, var(--color-vermilion) 30%, transparent) 60%,
+    var(--color-vermilion)
+  );
+  background-size: 200% 200%;
+  animation: gradient-rotate 3s ease infinite;
+}
+
+/* Inner dark frame */
+.hero-portrait-inner {
+  background: var(--color-ink);
+  border-radius: 0.2rem;
+}
+
+/* Floating skill badge */
+.hero-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--color-line);
+  background: color-mix(in srgb, var(--color-ink-soft) 90%, transparent);
+  backdrop-filter: blur(12px);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-paper-dim);
+  white-space: nowrap;
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.hero-badge::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-vermilion);
+  flex-shrink: 0;
+}
+
+/* Glow behind portrait */
+.hero-glow {
+  position: absolute;
+  inset: -40px;
+  border-radius: 2rem;
+  background: radial-gradient(
+    ellipse at center,
+    color-mix(in srgb, var(--color-vermilion) 15%, transparent),
+    transparent 70%
+  );
+  animation: glow-pulse 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Shimmer text for key words */
+.hero-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-vermilion) 0%,
+    color-mix(in srgb, var(--color-vermilion) 60%, var(--color-paper)) 50%,
+    var(--color-vermilion) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Stat counter styling */
+.hero-stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.hero-stat-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3vw, 44px);
+  color: var(--color-paper);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  uppercase: true;
+  letter-spacing: 0.12em;
+  color: var(--color-paper-faint);
+}
+
+/* Scroll cue */
+.hero-scroll-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+/* Line entrance for headline */
+.hero-line {
+  display: block;
+  overflow: hidden;
+}
+
+.hero-line-inner {
+  display: block;
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform 0.8s var(--ease-reveal), opacity 0.8s var(--ease-reveal);
+}
+
+.hero-line-inner.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Floating dots accent */
+.hero-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-vermilion);
+  opacity: 0.4;
+  animation: float-slow 5s ease-in-out infinite;
+}
+
+/* Skill chip hover glow */
+.hero-chip {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-chip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--chip-x, 50%) var(--chip-y, 0%),
+    color-mix(in srgb, var(--color-vermilion) 12%, transparent),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-reveal);
+}
+
+.hero-chip:hover::after {
+  opacity: 1;
+}
+
+/* ---------- Reduced motion (hero v2) ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-grid,
+  .hero-portrait-frame,
+  .hero-glow,
+  .hero-badge,
+  .hero-dot,
+  .hero-scroll-cue {
+    animation: none !important;
+  }
+  .hero-line-inner {
+    transform: translateY(0);
+    opacity: 1;
+    transition: none;
+  }
+  .hero-shimmer {
+    animation: none !important;
+    background: none;
+    -webkit-text-fill-color: var(--color-vermilion);
   }
 }
