@@ -3,6 +3,12 @@ import { speaking } from "@/lib/content";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
+/**
+ * Speaking engagements — each talk is its own card with a portrait image.
+ * Cards are grouped by year with a responsive grid. The portrait uses
+ * varying treatments (grayscale for older talks) to create visual hierarchy
+ * while staying a genuine asset.
+ */
 export function Speaking() {
   return (
     <section
@@ -31,126 +37,84 @@ export function Speaking() {
           </p>
         </Reveal>
 
-        {/* Featured talk */}
-        <Reveal className="mt-12" delay={100}>
-          <article className="interactive-card group grid overflow-hidden border border-line bg-ink-soft/50 transition-colors duration-500 hover:border-vermilion/60 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="p-8 sm:p-12">
-              <div className="flex flex-wrap items-center gap-4">
-                <span className="border border-vermilion px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-vermilion">
-                  Keynote · Nairobi
-                </span>
-                <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-paper-faint">
-                  RubyConf Africa 2026 · Feb
-                </span>
-              </div>
-              <h3 className="display mt-6 max-w-3xl text-[clamp(34px,4.4vw,64px)] text-paper">
-                Beyond Code - From Ruby Engineers to AI-Native Builders
-              </h3>
-              <p className="mt-6 max-w-2xl text-[16px] leading-relaxed text-paper-dim sm:text-[17px]">
-                AI is changing how software teams build, ship and scale products.
-                The future belongs to engineers who can rethink workflows, lead
-                with clarity, and combine technical skill with product thinking,
-                community and business impact - this talk shares practical lessons
-                from engineering, solution architecture, DevRel and community
-                building across African tech ecosystems.
-              </p>
-              <a
-                href="https://rubyconf.africa/sw/speakers/amani-kanu/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-underline mt-8 inline-flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.14em] text-vermilion"
-              >
-                View speaker profile <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-
-            <div className="grid grid-cols-2 gap-px bg-line p-px lg:min-h-full">
-              <figure className="relative min-h-[280px] overflow-hidden bg-ink">
-                <Image
-                  src="/portrait.jpg"
-                  alt="Amani Kanu speaking and sharing ideas with the developer community"
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 22vw"
-                  className="object-cover grayscale-[0.15] transition duration-700 group-hover:scale-105"
-                />
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/95 to-transparent px-4 pb-4 pt-12 font-mono text-[10px] uppercase tracking-[0.14em] text-paper">
-                  The Tech Evangelist
-                </figcaption>
-              </figure>
-              <figure className="relative min-h-[280px] overflow-hidden bg-vermilion">
-                <Image
-                  src="/Amani Kanu Logo on white BG.jpeg"
-                  alt="Amani Kanu - The Tech Evangelist logo"
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 22vw"
-                  className="object-cover mix-blend-multiply transition duration-700 group-hover:scale-105"
-                />
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-vermilion/95 to-transparent px-4 pb-4 pt-12 font-mono text-[10px] uppercase tracking-[0.14em] text-ink">
-                  30+ engagements
-                </figcaption>
-              </figure>
-            </div>
-          </article>
-        </Reveal>
-
-        {/* Year-grouped archive - balanced two columns */}
-        <div className="mt-16 grid grid-cols-1 gap-x-12 gap-y-16 lg:grid-cols-2">
-          {speaking.slice(0, 2).map((group, gi) => (
-            <Reveal key={group.year} delay={gi * 100}>
-              <h3 className="font-mono text-[15px] tracking-[0.1em] text-paper">
+        {/* Speaking engagement cards grouped by year */}
+        <div className="mt-16 space-y-20">
+          {speaking.map((group, gi) => (
+            <Reveal key={group.year} delay={gi * 80}>
+              {/* Year header */}
+              <h3 className="mb-8 flex items-center gap-4 font-mono text-[15px] tracking-[0.1em] text-paper">
+                <span className="text-paper-faint">—</span>
                 {group.year}
+                <span className="text-paper-faint">
+                  ({group.items.length} {group.items.length === 1 ? "talk" : "talks"})
+                </span>
+                <span className="h-px flex-1 bg-line" />
               </h3>
-              <div className="mt-6 divide-y divide-line-soft">
-                {group.items.map((item) => (
-                  <div
-                    key={`${group.year}-${item.talk}`}
-                    className="flex items-baseline justify-between gap-5 py-4"
-                  >
-                    <div className="min-w-0">
-                      <p className="text-[16px] leading-snug text-paper sm:text-[17px]">
-                        {item.talk}
-                      </p>
-                      <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.1em] text-paper-faint sm:text-[12px]">
-                        {item.event} · {item.location}
-                      </p>
-                    </div>
-                    <span className="shrink-0 font-mono text-[11px] text-paper-faint">
-                      {item.date}
-                    </span>
-                  </div>
-                ))}
+
+              {/* Card grid */}
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {group.items.map((item, ii) => {
+                  const isOlder =
+                    group.year === "2022" || group.year === "2023";
+                  const isMid = group.year === "2024";
+                  const imgPos = ii % 3;
+
+                  return (
+                    <article
+                      key={`${group.year}-${item.talk}`}
+                      className="interactive-card group flex flex-col overflow-hidden border border-line bg-ink transition-colors duration-500 hover:border-vermilion/60"
+                    >
+                      {/* Image */}
+                      <figure className="relative aspect-[4/3] overflow-hidden bg-ink-raised">
+                        <Image
+                          src="/portrait.jpg"
+                          alt={`${item.talk} at ${item.event}`}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className={`object-cover transition duration-700 group-hover:scale-105 ${
+                            isOlder
+                              ? "grayscale"
+                              : isMid
+                                ? "grayscale-[0.3]"
+                                : "grayscale-0"
+                          }`}
+                          style={{
+                            objectPosition:
+                              imgPos === 0
+                                ? "center top"
+                                : imgPos === 1
+                                  ? "center"
+                                  : "center bottom",
+                          }}
+                        />
+                        {/* Year badge */}
+                        <span className="absolute left-3 top-3 border border-ink/30 bg-ink/60 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.12em] text-paper backdrop-blur-sm">
+                          {group.year}
+                        </span>
+                        {/* Location badge */}
+                        <span className="absolute right-3 top-3 font-mono text-[9px] uppercase tracking-[0.1em] text-paper/70">
+                          {item.location}
+                        </span>
+                      </figure>
+
+                      {/* Card content */}
+                      <div className="flex flex-1 flex-col gap-3 p-5">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-vermilion">
+                          {item.event}
+                        </p>
+                        <h4 className="display text-[15px] font-medium leading-snug text-paper">
+                          {item.talk}
+                        </h4>
+                        <p className="mt-auto font-mono text-[11px] text-paper-faint">
+                          {item.date}
+                        </p>
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
             </Reveal>
           ))}
-          <Reveal className="lg:mt-20" delay={100}>
-            {speaking.slice(2).map((group) => (
-              <div key={group.year} className="mb-16 last:mb-0">
-                <h3 className="font-mono text-[15px] tracking-[0.1em] text-paper">
-                  {group.year}
-                </h3>
-                <div className="mt-6 divide-y divide-line-soft">
-                  {group.items.map((item) => (
-                    <div
-                      key={`${group.year}-${item.talk}`}
-                      className="flex items-baseline justify-between gap-5 py-4"
-                    >
-                      <div className="min-w-0">
-                        <p className="text-[16px] leading-snug text-paper sm:text-[17px]">
-                          {item.talk}
-                        </p>
-                        <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.1em] text-paper-faint sm:text-[12px]">
-                          {item.event} · {item.location}
-                        </p>
-                      </div>
-                      <span className="shrink-0 font-mono text-[11px] text-paper-faint">
-                        {item.date}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </Reveal>
         </div>
       </div>
     </section>

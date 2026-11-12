@@ -15,8 +15,7 @@ export function Expertise() {
           eyebrow="What I do"
           title={
             <>
-              Four disciplines, one through-line:
-              <br className="hidden sm:block" /> developers first.
+              Four disciplines, one through-line: developers first.
             </>
           }
         />
@@ -31,11 +30,11 @@ export function Expertise() {
               <div className="grid grid-cols-1 items-start gap-6 py-10 sm:grid-cols-12 sm:gap-10">
                 {/* Index + title */}
                 <div className="sm:col-span-4">
-                  <div className="flex items-start gap-4">
-                    <span className="font-mono text-[13px] text-paper-faint transition-colors duration-300 group-hover:text-vermilion sm:text-[15px]">
+                  <div className="flex items-start gap-5 sm:gap-6">
+                    <span className="flex h-7 items-center pt-1 font-mono text-[13px] text-paper-faint transition-colors duration-300 group-hover:text-vermilion sm:pt-1.5 sm:text-[15px] sm:min-w-[1.75rem] sm:justify-end">
                       {cap.index}
                     </span>
-                    <h3 className="display text-[clamp(22px,2.4vw,32px)] text-paper">
+                    <h3 className="display leading-tight text-[clamp(22px,2.4vw,32px)] text-paper">
                       {cap.title}
                     </h3>
                   </div>
