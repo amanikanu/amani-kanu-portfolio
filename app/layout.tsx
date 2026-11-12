@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#09090a",
+  themeColor: "#0f2346",
 };
 
 export default function RootLayout({
@@ -73,35 +73,37 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="font-sans antialiased">{children}</body>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Amani Kanu",
-            alternateName: "The Tech Evangelist",
-            url: "https://amanikanu.com",
-            email: "mailto:kanuamani@gmail.com",
-            telephone: "+2348160916203",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Lagos",
-              addressCountry: "NG",
-            },
-            jobTitle: "Senior Frontend Engineer",
-            description:
-              "Senior Frontend Engineer and Developer Relations professional from Lagos, Nigeria.",
-            sameAs: [
-              "https://www.linkedin.com/in/amani-kanu/",
-              "https://github.com/amanikanu",
-              "https://x.com/AmaniKanu",
-              "https://www.youtube.com/@Tech_Kolo",
-            ],
-          }),
-        }}
-      />
+      <body className="font-sans antialiased">
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Amani Kanu",
+              alternateName: "The Tech Evangelist",
+              url: "https://amanikanu.com",
+              email: "mailto:kanuamani@gmail.com",
+              telephone: "+2348160916203",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Lagos",
+                addressCountry: "NG",
+              },
+              jobTitle: "Senior Frontend Engineer",
+              description:
+                "Senior Frontend Engineer and Developer Relations professional from Lagos, Nigeria.",
+              sameAs: [
+                "https://www.linkedin.com/in/amani-kanu/",
+                "https://github.com/amanikanu",
+                "https://x.com/AmaniKanu",
+                "https://www.youtube.com/@Tech_Kolo",
+              ],
+            }),
+          }}
+        />
+      </body>
     </html>
   );
 }

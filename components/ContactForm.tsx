@@ -92,7 +92,7 @@ export function ContactForm() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <button
           type="submit"
-          className="group inline-flex items-center justify-center gap-2 bg-paper px-8 py-4 font-mono text-[12px] uppercase tracking-[0.14em] text-ink transition-colors duration-300 hover:bg-vermilion hover:text-white"
+          className="group inline-flex items-center justify-center gap-2 bg-vermilion px-8 py-4 font-mono text-[12px] uppercase tracking-[0.14em] text-ink transition-colors duration-300 hover:bg-vermilion-deep hover:text-ink"
         >
           Send message
           <span className="transition-transform duration-300 group-hover:translate-x-1">

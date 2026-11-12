@@ -2,27 +2,27 @@
 
 /*
   Design system — "The Tech Evangelist" portfolio
-  Tokens translated from the reference experience:
-  warm-black canvas, off-white paper, vermilion accent, editorial spacing.
+  Brand tokens are drawn from the Amani Kanu logo:
+  deep navy canvas, bright yellow accent, crisp editorial spacing.
 */
 
 @theme {
-  /* Surfaces — warm near-black, never pure #000 */
-  --color-ink: #09090a;
-  --color-ink-soft: #0d0d0f;
-  --color-ink-raised: #151518;
-  --color-line: #252529;
-  --color-line-soft: #1b1b1f;
+  /* Surfaces — logo navy */
+  --color-ink: #0f2346;
+  --color-ink-soft: #122a52;
+  --color-ink-raised: #193762;
+  --color-line: #294873;
+  --color-line-soft: #1d3a62;
 
-  /* Text — warm paper tones */
-  --color-paper: #f6f4ef;
-  --color-paper-dim: #b3b0a9;
-  --color-paper-faint: #7c7a74;
+  /* Text — clean white and cool blue-gray */
+  --color-paper: #f8fbff;
+  --color-paper-dim: #c1cde0;
+  --color-paper-faint: #8fa2c0;
 
-  /* Accent — vermilion, used with restraint */
-  --color-vermilion: #ef3b33;
-  --color-vermilion-deep: #c22a22;
-  --color-signal: #53d98a;
+  /* Accent — logo yellow */
+  --color-vermilion: #ffc20e;
+  --color-vermilion-deep: #e3a900;
+  --color-signal: #ffc20e;
 
   /* Typography */
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
@@ -95,7 +95,7 @@ body {
 
 ::selection {
   background: var(--color-vermilion);
-  color: #ffffff;
+  color: var(--color-ink);
 }
 
 :focus-visible {

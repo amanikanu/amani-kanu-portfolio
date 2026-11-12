@@ -139,7 +139,7 @@ export function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <a
               href="#work"
-              className="group inline-flex items-center gap-2 bg-paper px-6 py-3.5 font-mono text-[12px] uppercase tracking-[0.14em] text-ink transition-colors duration-300 hover:bg-vermilion hover:text-white"
+              className="group inline-flex items-center gap-2 bg-vermilion px-6 py-3.5 font-mono text-[12px] uppercase tracking-[0.14em] text-ink transition-colors duration-300 hover:bg-vermilion-deep hover:text-ink"
             >
               See selected work
               <span className="transition-transform duration-300 group-hover:translate-x-1">

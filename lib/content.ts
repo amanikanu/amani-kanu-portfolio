@@ -503,7 +503,7 @@ export const skills: Skill[] = [
 ];
 
 export const skillStats = [
-  { value: "31", label: "Technologies" },
+  { value: String(skills.length), label: "Technologies" },
   { value: "6", label: "Categories" },
   { value: "8", label: "Years of experience" },
 ];

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { navLinks, profile } from "@/lib/content";
 
 export function Nav() {
@@ -43,8 +44,15 @@ export function Nav() {
           className="group flex items-center gap-3"
           aria-label={`${profile.name} — home`}
         >
-          <span className="flex h-9 w-9 items-center justify-center border border-line font-mono text-[13px] font-medium tracking-tight text-paper transition-colors duration-300 group-hover:border-vermilion group-hover:text-vermilion">
-            AK
+          <span className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden border border-line bg-ink transition-colors duration-300 group-hover:border-vermilion">
+            <Image
+              src="/Amani Kanu Logo on dark bg.jpeg"
+              alt=""
+              fill
+              sizes="36px"
+              className="scale-[2.5] object-cover"
+              aria-hidden="true"
+            />
           </span>
           <span className="hidden font-display text-[15px] font-medium tracking-tight text-paper sm:inline">
             {profile.name}

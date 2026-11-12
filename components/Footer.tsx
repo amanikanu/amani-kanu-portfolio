@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { navLinks, profile, socials } from "@/lib/content";
 import { CurrentYear } from "./CurrentYear";
 
@@ -21,12 +22,22 @@ export function Footer() {
           <div>
             <a
               href="#top"
+              className="mb-6 block w-fit border border-line bg-white p-2 transition-transform duration-300 hover:-translate-y-1"
+              aria-label={`${profile.name} — back to top`}
+            >
+              <Image
+                src="/Amani Kanu Logo on white BG.jpeg"
+                alt={`${profile.name} — ${profile.brand}`}
+                width={132}
+                height={132}
+                className="h-[132px] w-[132px] object-contain"
+              />
+            </a>
+            <a
+              href="#top"
               className="group flex items-center gap-3"
               aria-label={`${profile.name} — back to top`}
             >
-              <span className="flex h-9 w-9 items-center justify-center border border-line font-mono text-[13px] text-paper transition-colors duration-300 group-hover:border-vermilion group-hover:text-vermilion">
-                AK
-              </span>
               <span className="font-display text-[15px] text-paper">
                 {profile.name}
               </span>
