@@ -259,16 +259,15 @@ function SkillCard({
       <div className="flex items-start justify-between gap-3">
         <div className="flex min-w-0 items-center gap-3">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-line bg-ink-raised/60 p-2 transition-colors duration-300 group-hover:border-paper-faint/50">
-            <span className="relative h-7 w-7">
-              <Image
-                src={`/skills/${logoSlug}.${logoExtension}`}
-                alt=""
-                fill
-                sizes="28px"
-                className="object-contain"
-                aria-hidden="true"
-              />
-            </span>
+            <img
+              src={`/skills/${logoSlug}.${logoExtension}`}
+              alt=""
+              width={28}
+              height={28}
+              className="h-7 w-7 object-contain"
+              aria-hidden="true"
+              loading="lazy"
+            />
           </span>
           <h3 className="display text-[17px] font-medium leading-tight text-paper sm:text-[18px]">
             {skill.name}
