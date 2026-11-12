@@ -9,7 +9,7 @@ type RevealProps = {
 };
 
 /**
- * Scroll reveal — IntersectionObserver-based, mirrors the reference's
+ * Scroll reveal - IntersectionObserver-based, mirrors the reference's
  * restrained fade-up motion. Respects prefers-reduced-motion via CSS.
  */
 export function Reveal({ children, className = "", delay = 0 }: RevealProps) {

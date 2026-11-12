@@ -24,7 +24,7 @@ export function Community() {
         <Reveal className="mt-14 max-w-2xl">
           <p className="text-[15px] leading-relaxed text-paper-dim">
             Tech is a team sport. I have spent years building inclusive
-            spaces where developers can learn, share and grow — from
+            spaces where developers can learn, share and grow - from
             founder-led communities in Calabar and Lagos to mentorship across
             Africa.
           </p>
@@ -77,7 +77,7 @@ export function Community() {
                 A WhatsApp community of ~4,000 young African developers
               </p>
               <p className="mt-3 max-w-xl text-[14px] leading-relaxed text-paper-dim">
-                Opportunities, career guidance and practical insights — shared
+                Opportunities, career guidance and practical insights - shared
                 every day, so nobody in the group learns alone.
               </p>
             </div>
@@ -90,7 +90,7 @@ export function Community() {
         {/* Mentorship note */}
         <Reveal className="mt-10 flex flex-wrap items-center justify-between gap-6">
           <p className="max-w-xl text-[14px] text-paper-dim">
-            Mentoring is where the work compounds — guiding mentees through real
+            Mentoring is where the work compounds - guiding mentees through real
             engineering work at Semicolon.africa, Nexascale and Alt School Africa.
           </p>
           <a

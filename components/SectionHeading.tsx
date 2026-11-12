@@ -10,7 +10,7 @@ type SectionHeadingProps = {
 };
 
 /**
- * Editorial section header — numbered index + eyebrow + display heading,
+ * Editorial section header - numbered index + eyebrow + display heading,
  * following the reference's "01 · Section" composition.
  */
 export function SectionHeading({

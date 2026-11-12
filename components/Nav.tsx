@@ -42,7 +42,7 @@ export function Nav() {
         <a
           href="#top"
           className="group flex items-center gap-3"
-          aria-label={`${profile.name} — home`}
+          aria-label={`${profile.name} - home`}
         >
           <span className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden border border-line bg-ink transition-colors duration-300 group-hover:border-vermilion">
             <Image

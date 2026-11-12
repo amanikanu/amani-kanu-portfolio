@@ -1,12 +1,12 @@
-# Amani Kanu — The Tech Evangelist
+# Amani Kanu - The Tech Evangelist
 
-A portfolio website for **Amani Kanu** — Senior Frontend Engineer & Developer Relations professional from Lagos, Nigeria.
+A portfolio website for **Amani Kanu** - Senior Frontend Engineer & Developer Relations professional from Lagos, Nigeria.
 
 ## Stack
 
 - Next.js (App Router) + React 19 + TypeScript
 - Tailwind CSS v4 (CSS-first design tokens in `app/globals.css`)
-- next/font (Space Grotesk, DM Sans, JetBrains Mono — self-hosted)
+- next/font (Space Grotesk, DM Sans, JetBrains Mono - self-hosted)
 - IntersectionObserver scroll reveals + CSS motion (no animation libraries)
 - Static OG card at `public/og.png`
 

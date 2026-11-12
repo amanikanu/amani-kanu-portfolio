@@ -53,7 +53,7 @@ export function Skills() {
           eyebrow="Skills & toolbox"
           title={
             <>
-              The tools I reach for —
+              The tools I reach for -
               <br className="hidden sm:block" /> and the ones I teach.
             </>
           }

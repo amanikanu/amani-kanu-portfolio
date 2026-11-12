@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 /*
-  Design system — "The Tech Evangelist" portfolio
+  Design system - "The Tech Evangelist" portfolio
   Brand tokens are drawn from the Amani Kanu logo:
   deep navy canvas, bright yellow accent, crisp editorial spacing.
 */
 
 @theme {
-  /* Surfaces — logo navy */
+  /* Surfaces - logo navy */
   --color-ink: #0f2346;
   --color-ink-soft: #122a52;
   --color-ink-raised: #193762;
   --color-line: #294873;
   --color-line-soft: #1d3a62;
 
-  /* Text — clean white and cool blue-gray */
+  /* Text - clean white and cool blue-gray */
   --color-paper: #f8fbff;
   --color-paper-dim: #c1cde0;
   --color-paper-faint: #8fa2c0;
 
-  /* Accent — logo yellow */
+  /* Accent - logo yellow */
   --color-vermilion: #ffc20e;
   --color-vermilion-deep: #e3a900;
   --color-signal: #ffc20e;
