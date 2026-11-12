@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
         {/* Closing statement */}
         <p className="display max-w-4xl text-[clamp(28px,4.5vw,64px)] leading-[1.05] text-paper">
-          {profile.name} — the {profile.brand}.
+          {profile.name} - the {profile.brand}.
           <br />
           <span className="text-paper-dim">
             Software, people, ideas. Built in Lagos, trusted worldwide.
@@ -23,11 +23,11 @@ export function Footer() {
             <a
               href="#top"
               className="mb-6 block w-fit border border-line bg-white p-2 transition-transform duration-300 hover:-translate-y-1"
-              aria-label={`${profile.name} — back to top`}
+              aria-label={`${profile.name} - back to top`}
             >
               <Image
                 src="/Amani Kanu Logo on white BG.jpeg"
-                alt={`${profile.name} — ${profile.brand}`}
+                alt={`${profile.name} - ${profile.brand}`}
                 width={132}
                 height={132}
                 className="h-[132px] w-[132px] object-contain"
@@ -36,7 +36,7 @@ export function Footer() {
             <a
               href="#top"
               className="group flex items-center gap-3"
-              aria-label={`${profile.name} — back to top`}
+              aria-label={`${profile.name} - back to top`}
             >
               <span className="font-display text-[15px] text-paper">
                 {profile.name}

@@ -1,7 +1,7 @@
 import { marqueeItems } from "@/lib/content";
 
 /**
- * Infinite skill marquee — full-width ticker strip echoing the reference's
+ * Infinite skill marquee - full-width ticker strip echoing the reference's
  * "SOFTWARE ENGINEERING ✦ CYBERSECITY ✦ ..." treatment.
  * The animation lives on the inner track (duplicated content) so the
  * -50% translate produces a seamless loop.

@@ -1,5 +1,5 @@
 /*
-  Content — Amani Kanu, "The Tech Evangelist"
+  Content - Amani Kanu, "The Tech Evangelist"
   Sourced from the Readdy portfolio and official conference speaker profiles
   (RubyConf Africa, Sailsconf). Retained facts only; copy refined for editorial quality.
 */
@@ -19,7 +19,7 @@ export const profile = {
   aboutBody:
     "From building scalable web apps to breaking down complex concepts on stage or in docs, I help developers succeed and connect them with the tools and teams that power innovation. I have shipped high-traffic products with React and Next.js, led frontend architecture for fintech and HR platforms, and trained developers across Africa, the United States, and online communities.",
   belief:
-    "Developers grow best when someone who has shipped real software is willing to walk the path with them — and when communities are built so that nobody learns alone.",
+    "Developers grow best when someone who has shipped real software is willing to walk the path with them - and when communities are built so that nobody learns alone.",
   stats: [
     { value: "6+", label: "Years building" },
     { value: "30+", label: "Talks delivered" },
@@ -28,7 +28,7 @@ export const profile = {
   ],
   status: [
     { key: "Role", value: "Senior Frontend Engineer & DevRel" },
-    { key: "Based", value: "Lagos, Nigeria — working worldwide" },
+    { key: "Based", value: "Lagos, Nigeria - working worldwide" },
     { key: "Status", value: "Available for speaking & collaboration" },
     { key: "Focus", value: "Frontend performance, AI-native building, communities" },
   ],
@@ -61,7 +61,7 @@ export const capabilities: Capability[] = [
     index: "01",
     title: "Frontend Engineering",
     description:
-      "Building scalable, performant web applications with modern frameworks and best practices — React, Next.js, and the architecture behind pages that load fast on low-end devices.",
+      "Building scalable, performant web applications with modern frameworks and best practices - React, Next.js, and the architecture behind pages that load fast on low-end devices.",
     tags: ["React", "Next.js", "TypeScript", "Performance", "Accessibility"],
   },
   {
@@ -75,14 +75,14 @@ export const capabilities: Capability[] = [
     index: "03",
     title: "Technical Education",
     description:
-      "Simplifying complex technical concepts through workshops, talks, and documentation — from frontend performance to AI-driven development — for audiences from students to senior engineers.",
+      "Simplifying complex technical concepts through workshops, talks, and documentation - from frontend performance to AI-driven development - for audiences from students to senior engineers.",
     tags: ["Workshops", "Talks", "Documentation", "Mentorship"],
   },
   {
     index: "04",
     title: "Community Building",
     description:
-      "Creating inclusive spaces where developers can learn, share, and grow together — inclusive tech communities that turn curiosity into careers.",
+      "Creating inclusive spaces where developers can learn, share, and grow together - inclusive tech communities that turn curiosity into careers.",
     tags: ["Communities", "Mentorship", "Inclusive Spaces", "Growth"],
   },
 ];
@@ -101,7 +101,7 @@ export const experience: ExperienceItem[] = [
   {
     role: "Developer Relations",
     company: "Must Company",
-    period: "Mar 2025 — Present",
+    period: "Mar 2025 - Present",
     location: "Seoul, South Korea",
     description:
       "Developer advocacy, technical content, livestreams and community development for a remote-first engineering org.",
@@ -114,12 +114,12 @@ export const experience: ExperienceItem[] = [
   {
     role: "Senior Frontend Engineer",
     company: "Must Company",
-    period: "Oct 2023 — Present",
+    period: "Oct 2023 - Present",
     location: "Seoul, South Korea",
     description:
       "Lead frontend development for high-traffic products including 54DNA and point2u.",
     achievements: [
-      "Developed and maintained frontend components for the 54DNA and point2u apps — improved page load times by 25%",
+      "Developed and maintained frontend components for the 54DNA and point2u apps - improved page load times by 25%",
       "Mentored junior developers on best practices and code conventions",
     ],
     tags: ["React", "Next.js", "TypeScript", "Material UI", "Tailwind", "AWS", "Firebase"],
@@ -127,7 +127,7 @@ export const experience: ExperienceItem[] = [
   {
     role: "Software Engineer",
     company: "Fluna",
-    period: "Aug 2022 — Oct 2023",
+    period: "Aug 2022 - Oct 2023",
     location: "New York, USA",
     description:
       "Led frontend development initiatives and system architecture design for fintech products.",
@@ -140,7 +140,7 @@ export const experience: ExperienceItem[] = [
   {
     role: "Frontend Engineer",
     company: "Parallel Score",
-    period: "Jun 2020 — Feb 2022",
+    period: "Jun 2020 - Feb 2022",
     location: "Lagos, Nigeria",
     description:
       "Built responsive and performant web applications with modern frontend architectures.",
@@ -153,7 +153,7 @@ export const experience: ExperienceItem[] = [
   {
     role: "Software Engineer",
     company: "Decagon (Indeed)",
-    period: "Feb 2018 — May 2020",
+    period: "Feb 2018 - May 2020",
     location: "Austin, Texas, USA",
     description:
       "Built scalable web applications using modern JavaScript frameworks in a remote-first product team.",
@@ -245,7 +245,7 @@ export const speaking: { year: string; items: SpeakingItem[] }[] = [
     year: "2026",
     items: [
       {
-        talk: "Beyond Code — From Ruby Engineers to AI-Native Builders",
+        talk: "Beyond Code - From Ruby Engineers to AI-Native Builders",
         event: "RubyConf Africa",
         location: "Nairobi, Kenya",
         date: "Feb 2026",
@@ -274,7 +274,7 @@ export const speaking: { year: string; items: SpeakingItem[] }[] = [
         date: "May 15",
       },
       {
-        talk: "Judge — Kidsthatcode Hackathon 2025: Code for Change",
+        talk: "Judge - Kidsthatcode Hackathon 2025: Code for Change",
         event: "Kidsthatcode",
         location: "Lagos, Nigeria",
         date: "Apr 5",
@@ -321,7 +321,7 @@ export const speaking: { year: string; items: SpeakingItem[] }[] = [
         date: "Aug 17",
       },
       {
-        talk: "Building the Future — Your Journey in Tech Starts Here",
+        talk: "Building the Future - Your Journey in Tech Starts Here",
         event: "Kidsthatcode",
         location: "Lagos, Nigeria",
         date: "Aug 24",
@@ -381,44 +381,44 @@ export const community: CommunityItem[] = [
   {
     name: "Decagon Alumni Network (Decadev centre)",
     role: "Founder & community lead",
-    period: "2019 — Present",
+    period: "2019 - Present",
     description:
-      "Leading the Decagon alumni community — a thriving network of tech professionals sharing knowledge, referrals and career growth.",
+      "Leading the Decagon alumni community - a thriving network of tech professionals sharing knowledge, referrals and career growth.",
   },
   {
     name: "Calabar Tech Community",
     role: "Founder & community lead",
-    period: "2020 — Present",
+    period: "2020 - Present",
     description:
       "Founded the Calabar tech community, building a vibrant ecosystem connecting professionals, learners and opportunities in the region.",
   },
   {
     name: "Amiva",
     role: "Founder",
-    period: "—",
+    period: "-",
     description:
-      "Building practical tools and initiatives that support young African developers — from first principles to shipped products.",
+      "Building practical tools and initiatives that support young African developers - from first principles to shipped products.",
   },
   {
     name: "Tech in School",
     role: "Founder",
-    period: "—",
+    period: "-",
     description:
       "An initiative bringing practical technology education and exposure into schools, so students meet the tools of the industry before the industry meets them.",
   },
   {
     name: "GDG Ajah",
     role: "Staff volunteer",
-    period: "2021 — Present",
+    period: "2021 - Present",
     description:
-      "Supporting Google Developer Group activities and events — logistics, community and knowledge-sharing work behind the scenes.",
+      "Supporting Google Developer Group activities and events - logistics, community and knowledge-sharing work behind the scenes.",
   },
   {
     name: "Mentorship programmes",
     role: "Mentor",
-    period: "2023 — Present",
+    period: "2023 - Present",
     description:
-      "Technical mentor at Semicolon.africa (2023), Nexascale Miva bootcamp and Alt School Africa Hacksultan (2024) — guiding mentees through real engineering work and career development.",
+      "Technical mentor at Semicolon.africa (2023), Nexascale Miva bootcamp and Alt School Africa Hacksultan (2024) - guiding mentees through real engineering work and career development.",
   },
 ];
 

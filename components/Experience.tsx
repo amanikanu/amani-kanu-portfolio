@@ -15,7 +15,7 @@ export function Experience() {
           eyebrow="Experience"
           title={
             <>
-              Six years of shipping — from Lagos
+              Six years of shipping - from Lagos
               <br className="hidden sm:block" /> to Seoul, New York & back.
             </>
           }
@@ -43,7 +43,7 @@ export function Experience() {
                 <div className="sm:col-span-9">
                   <h3 className="display text-[clamp(22px,2.6vw,34px)] text-paper">
                     {job.role}
-                    <span className="text-paper-faint"> — {job.company}</span>
+                    <span className="text-paper-faint"> - {job.company}</span>
                   </h3>
                   <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-paper-dim">
                     {job.description}

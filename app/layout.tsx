@@ -25,9 +25,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://amanikanu.com"),
-  title: "Amani Kanu — The Tech Evangelist | Senior Frontend Engineer & DevRel",
+  title: "Amani Kanu - The Tech Evangelist | Senior Frontend Engineer & DevRel",
   description:
-    "Amani Kanu is a Senior Frontend Engineer and Developer Relations professional from Lagos, Nigeria — building scalable web products, inclusive developer communities, and technical content across Africa and beyond.",
+    "Amani Kanu is a Senior Frontend Engineer and Developer Relations professional from Lagos, Nigeria - building scalable web products, inclusive developer communities, and technical content across Africa and beyond.",
   keywords: [
     "Amani Kanu",
     "The Tech Evangelist",
@@ -38,21 +38,21 @@ export const metadata: Metadata = {
     "community building",
     "tech speaker Nigeria",
   ],
-  applicationName: "Amani Kanu — The Tech Evangelist",
+  applicationName: "Amani Kanu - The Tech Evangelist",
   alternates: {
     canonical: "https://amanikanu.com",
   },
   openGraph: {
     type: "website",
-    siteName: "Amani Kanu — The Tech Evangelist",
-    title: "Amani Kanu — The Tech Evangelist | Senior Frontend Engineer & DevRel",
+    siteName: "Amani Kanu - The Tech Evangelist",
+    title: "Amani Kanu - The Tech Evangelist | Senior Frontend Engineer & DevRel",
     description:
       "Senior Frontend Engineer & Developer Relations from Lagos. Building scalable web products, inclusive developer communities, and technical content across Africa and beyond.",
     images: ["/og.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amani Kanu — The Tech Evangelist",
+    title: "Amani Kanu - The Tech Evangelist",
     description:
       "Senior Frontend Engineer & Developer Relations from Lagos, Nigeria.",
     images: ["/og.png"],

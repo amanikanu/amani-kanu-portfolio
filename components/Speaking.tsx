@@ -24,9 +24,9 @@ export function Speaking() {
 
         <Reveal className="mt-14 max-w-3xl">
           <p className="text-[16px] leading-relaxed text-paper-dim sm:text-[18px]">
-            Talks that combine technical depth with practical direction —
+            Talks that combine technical depth with practical direction -
             frontend performance, AI-native building, developer growth and
-            community — delivered across Africa, the United States and online.
+            community - delivered across Africa, the United States and online.
             <span className="ml-1 inline text-paper">30+ engagements so far.</span>
           </p>
         </Reveal>
@@ -44,13 +44,13 @@ export function Speaking() {
                 </span>
               </div>
               <h3 className="display mt-6 max-w-3xl text-[clamp(34px,4.4vw,64px)] text-paper">
-                Beyond Code — From Ruby Engineers to AI-Native Builders
+                Beyond Code - From Ruby Engineers to AI-Native Builders
               </h3>
               <p className="mt-6 max-w-2xl text-[16px] leading-relaxed text-paper-dim sm:text-[17px]">
                 AI is changing how software teams build, ship and scale products.
                 The future belongs to engineers who can rethink workflows, lead
                 with clarity, and combine technical skill with product thinking,
-                community and business impact — this talk shares practical lessons
+                community and business impact - this talk shares practical lessons
                 from engineering, solution architecture, DevRel and community
                 building across African tech ecosystems.
               </p>
@@ -80,7 +80,7 @@ export function Speaking() {
               <figure className="relative min-h-[280px] overflow-hidden bg-vermilion">
                 <Image
                   src="/Amani Kanu Logo on white BG.jpeg"
-                  alt="Amani Kanu — The Tech Evangelist logo"
+                  alt="Amani Kanu - The Tech Evangelist logo"
                   fill
                   sizes="(max-width: 1024px) 50vw, 22vw"
                   className="object-cover mix-blend-multiply transition duration-700 group-hover:scale-105"
@@ -93,7 +93,7 @@ export function Speaking() {
           </article>
         </Reveal>
 
-        {/* Year-grouped archive — balanced two columns */}
+        {/* Year-grouped archive - balanced two columns */}
         <div className="mt-16 grid grid-cols-1 gap-x-12 gap-y-16 lg:grid-cols-2">
           {speaking.slice(0, 2).map((group, gi) => (
             <Reveal key={group.year} delay={gi * 100}>

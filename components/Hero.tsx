@@ -5,7 +5,7 @@ import Image from "next/image";
 import { profile, skills } from "@/lib/content";
 import { Marquee } from "./Marquee";
 
-const headlineWords = ["I", "build", "fast,", "accessible", "products", "—", "and", "the", "communities", "that", "power", "them."];
+const headlineWords = ["I", "build", "fast,", "accessible", "products", "-", "and", "the", "communities", "that", "power", "them."];
 
 const rotatingRoles = [
   "Senior Frontend Engineer",
@@ -81,7 +81,7 @@ export function Hero() {
             {profile.availability}
           </p>
 
-          {/* Headline — staggered word reveal */}
+          {/* Headline - staggered word reveal */}
           <h1 className="display max-w-[780px] text-[clamp(42px,5.8vw,78px)] text-paper">
             {headlineWords.map((word, i) => (
               <span
@@ -101,7 +101,7 @@ export function Hero() {
 
           {/* Name */}
           <p className="italic-name mt-7 text-[clamp(20px,2.2vw,30px)] text-paper">
-            {profile.name} — the {profile.brand}
+            {profile.name} - the {profile.brand}
           </p>
 
           {/* Rotating role */}
@@ -115,7 +115,7 @@ export function Hero() {
           {/* Sub text */}
           <p className="mt-6 max-w-xl text-[16px] leading-relaxed text-paper-dim sm:text-[17px]">
             {profile.shortBio} From high-traffic web apps to stage talks and
-            docs, I help developers succeed — and connect them with the tools
+            docs, I help developers succeed - and connect them with the tools
             and teams that power innovation.
           </p>
 

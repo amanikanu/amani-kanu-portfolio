@@ -15,7 +15,7 @@ export function Work() {
           eyebrow="Selected work"
           title={
             <>
-              Products I have helped build —
+              Products I have helped build -
               <br className="hidden sm:block" /> from fintech to developer tooling.
             </>
           }

@@ -84,7 +84,7 @@ export function ContactForm() {
           rows={5}
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
-          placeholder="Tell me the actual problem — the better the context, the faster the answer."
+          placeholder="Tell me the actual problem - the better the context, the faster the answer."
           className={`${fieldClass} resize-none`}
         />
       </label>
