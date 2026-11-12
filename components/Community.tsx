@@ -67,7 +67,7 @@ export function Community() {
             href="https://whatsapp.com/channel/0029Vb5ezhHC1FuFX611P80z"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col gap-4 border border-line bg-ink-soft/40 p-8 transition-colors duration-500 hover:border-paper-dim sm:flex-row sm:items-center sm:justify-between sm:p-10"
+            className="interactive-card group flex flex-col gap-4 border border-line bg-ink-soft/40 p-8 transition-colors duration-500 hover:border-paper-dim sm:flex-row sm:items-center sm:justify-between sm:p-10"
           >
             <div>
               <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-paper-faint">

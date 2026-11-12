@@ -33,7 +33,7 @@ export function Speaking() {
 
         {/* Featured talk */}
         <Reveal className="mt-12" delay={100}>
-          <article className="group grid overflow-hidden border border-line bg-ink-soft/50 transition-colors duration-500 hover:border-vermilion/60 lg:grid-cols-[1.15fr_0.85fr]">
+          <article className="interactive-card group grid overflow-hidden border border-line bg-ink-soft/50 transition-colors duration-500 hover:border-vermilion/60 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="p-8 sm:p-12">
               <div className="flex flex-wrap items-center gap-4">
                 <span className="border border-vermilion px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-vermilion">

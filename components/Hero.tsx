@@ -16,6 +16,7 @@ const rotatingRoles = [
 ];
 
 const heroSkills = ["React", "Next.js", "TypeScript", "AWS", "DevRel", "Tailwind"];
+const headlineAccentWords = new Set(["fast,", "accessible", "communities", "power"]);
 
 export function Hero() {
   const [visibleWords, setVisibleWords] = useState(0);
@@ -81,15 +82,15 @@ export function Hero() {
           </p>
 
           {/* Headline — staggered word reveal */}
-          <h1 className="display text-[clamp(46px,7vw,92px)] text-paper">
+          <h1 className="display max-w-[780px] text-[clamp(42px,5.8vw,78px)] text-paper">
             {headlineWords.map((word, i) => (
               <span
                 key={i}
-                className={`inline-block transition-all duration-500 ease-[cubic-bezier(0.22,0.61,0.36,1)] ${
+                className={`hero-word inline-block ${
                   i < visibleWords
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-4 opacity-0"
-                }`}
+                    ? "is-visible"
+                    : ""
+                } ${headlineAccentWords.has(word) ? "text-vermilion" : "text-paper"}`}
                 style={{ transitionDelay: `${i * 45}ms` }}
               >
                 {word}
@@ -106,7 +107,7 @@ export function Hero() {
           {/* Rotating role */}
           <p className="mt-4 font-mono text-[13px] text-paper-dim">
             <span className="text-paper-faint">Currently:</span>{" "}
-            <span className="text-vermilion">
+            <span key={rotatingRoles[activeRole]} className="role-swap text-vermilion">
               {rotatingRoles[activeRole]}
             </span>
           </p>

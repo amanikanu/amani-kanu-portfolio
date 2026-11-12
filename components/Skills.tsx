@@ -250,7 +250,7 @@ function SkillCard({
 
   return (
     <div
-      className={`skill-card group relative flex flex-col gap-3 border-b border-line bg-ink transition-colors duration-300 hover:bg-ink-soft p-5 ${
+      className={`interactive-card skill-card group relative flex flex-col gap-3 border-b border-line bg-ink transition-colors duration-300 hover:bg-ink-soft p-5 ${
         isHovered ? "bg-ink-soft" : ""
       }`}
       style={{ animationDelay: `${Math.min(index, 12) * 25}ms` }}

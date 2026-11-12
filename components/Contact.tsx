@@ -103,7 +103,7 @@ export function Contact() {
 
           {/* Right: form */}
           <Reveal className="lg:col-span-7" delay={120}>
-            <div className="border border-line bg-ink-soft/30 p-8 sm:p-10">
+            <div className="interactive-card border border-line bg-ink-soft/30 p-8 sm:p-10">
               <ContactForm />
             </div>
           </Reveal>
