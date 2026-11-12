@@ -56,7 +56,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pb-12 pt-28 sm:pb-16 sm:pt-32"
+      className="relative flex min-h-[calc(100svh-4rem)] flex-col justify-center overflow-hidden pb-0 pt-24 sm:pt-28 lg:pt-20"
       aria-label="Introduction"
     >
       {/* Subtle radial glow */}
@@ -68,7 +68,7 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="mx-auto grid w-full max-w-[1240px] grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16">
+      <div className="mx-auto grid w-full max-w-[1240px] grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-10">
         {/* Text column */}
         <div className="lg:col-span-7">
           {/* Eyebrow */}
@@ -81,7 +81,7 @@ export function Hero() {
           </p>
 
           {/* Headline — staggered word reveal */}
-          <h1 className="display text-[clamp(40px,6.6vw,84px)] text-paper">
+          <h1 className="display text-[clamp(46px,7vw,92px)] text-paper">
             {headlineWords.map((word, i) => (
               <span
                 key={i}
@@ -112,7 +112,7 @@ export function Hero() {
           </p>
 
           {/* Sub text */}
-          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-paper-dim">
+          <p className="mt-6 max-w-xl text-[16px] leading-relaxed text-paper-dim sm:text-[17px]">
             {profile.shortBio} From high-traffic web apps to stage talks and
             docs, I help developers succeed — and connect them with the tools
             and teams that power innovation.
@@ -156,15 +156,15 @@ export function Hero() {
         </div>
 
         {/* Portrait column */}
-        <div className="lg:col-span-5">
-          <div className="mx-auto max-w-[340px] sm:max-w-[380px] lg:ml-auto lg:mr-0 lg:max-w-[400px]">
+        <div className="flex justify-center lg:col-span-5">
+          <div className="mx-auto w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[400px]">
             <figure id="hero-portrait" className="relative">
               {/* Glow frame */}
               <div
                 className="pointer-events-none absolute -inset-3 -z-10 rounded-sm border"
                 style={{
                   borderColor: "var(--color-line)",
-                  boxShadow: `0 0 60px -20px rgba(239, 59, 51, ${
+                  boxShadow: `0 0 60px -20px rgba(255, 194, 14, ${
                     (Math.abs(mouseX - 50) + Math.abs(mouseY - 50)) < 30 ? 0.15 : 0.05
                   })`,
                 }}
@@ -200,7 +200,7 @@ export function Hero() {
       </div>
 
       {/* Marquee strip */}
-      <div className="mt-14 sm:mt-20">
+      <div className="mt-10 sm:mt-12">
         <Marquee />
       </div>
     </section>

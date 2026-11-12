@@ -31,7 +31,7 @@ export function SectionHeading({
         <span className="eyebrow">{eyebrow}</span>
       </div>
       <h2
-        className={`display text-[clamp(34px,5vw,64px)] text-paper ${
+        className={`display text-[clamp(42px,6vw,82px)] text-paper ${
           align === "center" ? "mx-auto max-w-3xl text-center" : ""
         }`}
       >
